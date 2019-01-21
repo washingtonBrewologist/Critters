@@ -25,11 +25,10 @@ import java.util.Random;
                 return Action.INFECT;
             }
 
-           /* if (info.getLeft() == Neighbor.SAME && info.getRight() == Neighbor.SAME
+            if (info.getLeft() == Neighbor.SAME && info.getRight() == Neighbor.SAME
                     && info.getBack() == Neighbor.SAME) { // if surrounded L,R,B by same then break off
                 return Action.HOP;
             }
-*/
 
 
             if (info.getLeft() == Neighbor.SAME || info.getRight() == Neighbor.SAME
@@ -39,8 +38,6 @@ import java.util.Random;
                 }else if (info.getLeft() == Neighbor.SAME && info.getRight() == Neighbor.SAME
                         && info.getBack() == Neighbor.SAME){
                     return Action.HOP;
-                } else if (info.getRight() == Neighbor.OTHER) {
-                    return Action.RIGHT;
                 } else if (info.getLeft() == Neighbor.WALL || info.getLeft() == Neighbor.SAME) {
                     return Action.RIGHT;
                 } else if (info.getRight() == Neighbor.WALL || info.getRight() == Neighbor.SAME) {
